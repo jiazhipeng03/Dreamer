@@ -10,8 +10,8 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 bound = new Vector2(0, Mathf.Infinity);
+        Vector2 minBound = new Vector2(0, 0);
         //  TO-DO set max bound
-        transform.position = new Vector3(Mathf.Max(bound[0],m_Player.transform.position.x), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.Max(minBound[0],m_Player.transform.position.x), Mathf.Max(minBound[1], m_Player.transform.position.y), transform.position.z);
     }
 }
